@@ -1,2 +1,2 @@
-# SImple_CRUD_WebApp
-A simple CRUD webapp made in javascript.
+# SImple_CRUD_WebSite
+A simple CRUD website made in javascript.
