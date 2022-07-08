@@ -3,8 +3,10 @@ const count = {
 		var i = localStorage.getItem('count');
 		if(i == null)
 			localStorage.setItem('count','0');
+		document.querySelector("#contador").innerHTML = localStorage.getItem('count');
 	},
 	add : function(){
+		count.init();
 		var aux = localStorage.getItem('count');
 		aux = parseInt(aux);
 		aux ++;
@@ -12,6 +14,7 @@ const count = {
 		document.querySelector("#contador").innerHTML = localStorage.getItem('count');
 	},
 	minus : function(){
+		count.init();
 		var aux = localStorage.getItem('count');
 		aux = parseInt(aux);
 		aux --;
