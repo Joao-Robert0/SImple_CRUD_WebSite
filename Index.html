@@ -1,13 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-		<title>CRUD Basics</title>
-		<center><h2 style="color:white">Simple Crud WebSite</h2></center>
-	</head>
-	<body style="background-color:#2C3639 ;">
-		<br>
-		<center><p style="color:whitesmoke">Clique no botão abaixo pra incrementar o contador</p></center>
-		<center><button type="button" onclick="contador()">Não clique aqui</button></center>
+		<meta charset="UTF-8">
 		<script src="index.js"></script>
+		<link rel="stylesheet" href="index.css">
+
+		<title>CRUD Basics</title>
+	</head>
+	<body>
+		<center><div id="titulo"><h1>Simple Crud WebSite</h1></div></center>
+		<br>
+		<center><p>Clique no botão abaixo pra incrementar o contador</p></center>
+		<center><button class="button_0"type="button" onclick="plus_cont()">+1</button>
+		<button class="button_0"type="button" onclick="minus_cont()">-1</button>
+		<button class="button_1"type="button" onclick="z_cont()">Reset</button></center>
 	</body>
 </html>
