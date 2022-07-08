@@ -1,22 +1,31 @@
-var x = localStorage.getItem('count');
+const count = {
+	init : function(){
+		var i = localStorage.getItem('count');
+		if(i == null)
+			localStorage.setItem('count','0');
+	},
+	add : function(){
+		var aux = localStorage.getItem('count');
+		aux = parseInt(aux);
+		aux ++;
+		localStorage.setItem('count',aux);
+		document.querySelector("#contador").innerHTML = localStorage.getItem('count');
+	},
+	minus : function(){
+		var aux = localStorage.getItem('count');
+		aux = parseInt(aux);
+		aux --;
+		localStorage.setItem('count',aux);
+		document.querySelector("#contador").innerHTML = localStorage.getItem('count');
+	},
 
-if (x == null){
-localStorage.setItem('count','0');}
-
-function plus_cont(){
-	var aux = localStorage.getItem('count');
-	aux = parseInt(aux);
-	aux ++;
-	localStorage.setItem('count',aux);
+	reset : function(){
+		localStorage.setItem('count','0');
+		document.querySelector("#contador").innerHTML = localStorage.getItem('count');
+	},
 }
 
-function minus_cont(){
-	var aux = localStorage.getItem('count');
-	aux = parseInt(aux);
-	aux --;
-	localStorage.setItem('count',aux);
-}
-
-function z_cont(){
-	localStorage.setItem('count','0');
-}
+window.onload= count.init;
+document.querySelector("#add_button").addEventListener("click",count.add);
+document.querySelector("#minus_button").addEventListener("click",count.minus);
+document.querySelector("#reset_button").addEventListener("click",count.reset);

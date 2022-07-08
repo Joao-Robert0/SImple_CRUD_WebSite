@@ -2,17 +2,19 @@
 <html lang="en">
 	<head>
 		<meta charset="UTF-8">
-		<script src="index.js"></script>
 		<link rel="stylesheet" href="index.css">
-
 		<title>CRUD Basics</title>
 	</head>
 	<body>
-		<center><div id="titulo"><h1>Simple Crud WebSite</h1></div></center>
+		<div id="titulo"><h1>Simple Crud WebSite</h1></div>
 		<br>
-		<center><p>Clique no botão abaixo pra incrementar o contador</p></center>
-		<center><button class="button_0"type="button" onclick="plus_cont()">+1</button>
-		<button class="button_0"type="button" onclick="minus_cont()">-1</button>
-		<button class="button_1"type="button" onclick="z_cont()">Reset</button></center>
+		<p id="contador">0</p>
+		<p>Clique no botão abaixo pra incrementar o contador</p>
+		<div id="button_row">
+			<button id="add_button" class="button">+1</button>
+			<button id="minus_button" class="button">-1</button>
+			<button id="reset_button" class="button">Reset</button>
+		</div>
+		<script src="index.js"></script>
 	</body>
 </html>
